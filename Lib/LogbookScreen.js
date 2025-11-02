@@ -19,7 +19,7 @@ export default function LogbookScreen({ navigation }) {
             style={styles.noteItem}
             onPress={() => navigation.navigate('Focus', { entry: item })}>
             <Text style={styles.noteTitle}>{item.title}</Text>
-            <Text>{new Date().toLocaleDateString()}</Text>
+            {item.location && <Text>📍</Text>} 
           </TouchableOpacity>
         )}
       />
